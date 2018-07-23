@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" type="image/gif/png" href="logo.gif">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>
+ IRRS
+</title>
+<style>
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+form {
+    border: 3px solid 	#D3D3D3;
+     }
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+
+.new{
+      border:4px solid black ;
+	  
+}
+
+.features{
+      border:4px solid black;
+      margin-top:7px;	  
+
+}
+
+button {
+    background-color: #2de2df;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+	border-radius:50px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+.forgt{
+      margin-left:1px;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 100%;
+	height : 500px;
+}
+
+.container {
+    padding: 16px;
+}
+
+.clickadv{
+ margin-left:180px;
+}
+a{
+ text-decoration:none;
+}
+</style>
+<body>
+ <MARQUEE SCROLLDELAY=50 style="margin-top:-20px;"><h1><i class="fa fa-train" style="margin-right:4px;"></i>Indian Railway Reservation System Limited</h1></MARQUEE>
+ <div class="imgcontainer" style="margin-top:-20px;">
+    <img src="train.gif" alt="Avatar" class="avatar" >
+ </div>
+ <div class="grid">
+   <fieldset class="features">
+   <div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 5</div>
+    <img src="phone.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 5</div>
+    <img src="boot.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 5</div>
+    <img src="watch.jpg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 5</div>
+    <img src="amazon.jpg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="cocacola.jpg" style="width:100%;">
+  </div>
+  
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+</script>
+<div class="clickadv">
+<a href="adv.php">Click Here To Place ADV With Us.</a>
+</div>
+
+   </fieldset>
+   <fieldset class="new">
+      <legend>
+        Login/Register
+      </legend>
+        <div class="container">
+		   <form method="POST" action="verify.php">
+           <label><b>Username</b></label>
+           <input type="text" placeholder="Enter Username" name="username" required>
+           <label><b>Password</b></label>
+           <input type="password" placeholder="Enter Password" name="password" required>
+           <button type="submit">Login</button>
+		   </form>
+	       <div class="grid">
+	         <a href="register.php"><button class="small">Sing Up</button></a>
+	         <a href="admin.php"><button class="forgt">ADMIN</button></a>
+           </div>
+        </div>
+
+         <div class="container" style="background-color:	#D3D3D3"></div>
+    </fieldset>
+    
+ </div>
+</body>
+</html>
